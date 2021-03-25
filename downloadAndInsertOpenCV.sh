@@ -16,7 +16,7 @@ rm -rf opencv2.framework/
 
 wget ${base_url}/opencv-${version}-android-sdk.zip
 unzip opencv-${version}-android-sdk.zip
-cd android/app/src/main
+cd android/openCVLibrary3411/src/main
 mkdir jniLibs
 cp -r ./../../../../OpenCV-android-sdk/sdk/native/libs/ ./jniLibs
 cd ../../../../

@@ -5,7 +5,12 @@
     "owner": "z1app",
     "privacy": "unlisted",
     "android": {
-      "package": "com.z1opencv"
+      "package": "com.z1opencv",
+      "versionCode": 1
+    },
+    "ios": {
+      "bundleIdentifier": "com.z1opencv",
+      "buildNumber": "1"
     }
   }
 }

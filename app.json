@@ -1,4 +1,11 @@
 {
-  "name": "z1OpenCv",
-  "displayName": "z1OpenCv"
+  "expo": {
+    "name": "z1OpenCv",
+    "slug": "z1OpenCv",
+    "owner": "z1app",
+    "privacy": "unlisted",
+    "android": {
+      "package": "com.z1opencv"
+    }
+  }
 }

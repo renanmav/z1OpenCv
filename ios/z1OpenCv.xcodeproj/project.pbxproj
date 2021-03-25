@@ -14,6 +14,8 @@
 		3C83DF0355B47BDA31C75BF3 /* libPods-z1OpenCv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A22D3F444AD31AFB8BCF1BA /* libPods-z1OpenCv.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AED492ABB7F9D2FDDF73E8FC /* libPods-z1OpenCv-z1OpenCvTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 221EAD0982A9A64229D64977 /* libPods-z1OpenCv-z1OpenCvTests.a */; };
+		C56DADD5260D22BE00C98EB8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56DADD4260D22BE00C98EB8 /* opencv2.framework */; };
+		C56DADD8260D232D00C98EB8 /* RNOpenCvLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = C56DADD7260D232D00C98EB8 /* RNOpenCvLibrary.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		475629D8B91279FAAB66EB71 /* Pods-z1OpenCv-z1OpenCvTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-z1OpenCv-z1OpenCvTests.release.xcconfig"; path = "Target Support Files/Pods-z1OpenCv-z1OpenCvTests/Pods-z1OpenCv-z1OpenCvTests.release.xcconfig"; sourceTree = "<group>"; };
 		6A22D3F444AD31AFB8BCF1BA /* libPods-z1OpenCv.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-z1OpenCv.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = z1OpenCv/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C56DADD4260D22BE00C98EB8 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		C56DADD6260D232D00C98EB8 /* RNOpenCvLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNOpenCvLibrary.h; path = z1OpenCv/RNOpenCvLibrary.h; sourceTree = "<group>"; };
+		C56DADD7260D232D00C98EB8 /* RNOpenCvLibrary.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = RNOpenCvLibrary.mm; path = z1OpenCv/RNOpenCvLibrary.mm; sourceTree = "<group>"; };
+		C56DADDB260D237400C98EB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = z1OpenCv/PrefixHeader.pch; sourceTree = "<group>"; };
 		D6D60D3CA2A1F5EBC6BD8D39 /* Pods-z1OpenCv-z1OpenCvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-z1OpenCv-z1OpenCvTests.debug.xcconfig"; path = "Target Support Files/Pods-z1OpenCv-z1OpenCvTests/Pods-z1OpenCv-z1OpenCvTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7888C6E7F8417F30CAD576D /* Pods-z1OpenCv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-z1OpenCv.debug.xcconfig"; path = "Target Support Files/Pods-z1OpenCv/Pods-z1OpenCv.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -59,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56DADD5260D22BE00C98EB8 /* opencv2.framework in Frameworks */,
 				3C83DF0355B47BDA31C75BF3 /* libPods-z1OpenCv.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,12 +93,16 @@
 		13B07FAE1A68108700A75B9A /* z1OpenCv */ = {
 			isa = PBXGroup;
 			children = (
+				C56DADD4260D22BE00C98EB8 /* opencv2.framework */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C56DADD6260D232D00C98EB8 /* RNOpenCvLibrary.h */,
+				C56DADD7260D232D00C98EB8 /* RNOpenCvLibrary.mm */,
+				C56DADDB260D237400C98EB8 /* PrefixHeader.pch */,
 			);
 			name = z1OpenCv;
 			sourceTree = "<group>";
@@ -145,7 +156,6 @@
 				D6D60D3CA2A1F5EBC6BD8D39 /* Pods-z1OpenCv-z1OpenCvTests.debug.xcconfig */,
 				475629D8B91279FAAB66EB71 /* Pods-z1OpenCv-z1OpenCvTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -413,6 +423,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				C56DADD8260D232D00C98EB8 /* RNOpenCvLibrary.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +497,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/z1OpenCv/PrefixHeader.pch";
 				INFOPLIST_FILE = z1OpenCv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +528,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/z1OpenCv/PrefixHeader.pch";
 				INFOPLIST_FILE = z1OpenCv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

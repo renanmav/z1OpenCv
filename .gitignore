@@ -60,3 +60,4 @@ buck-out/
 
 # OpenCV
 android/openCVLibrary3411/src/main/jniLibs
+ios/opencv2.framework

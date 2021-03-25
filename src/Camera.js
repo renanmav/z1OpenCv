@@ -20,20 +20,30 @@ export default function Camera() {
 
       const base64 = await readFile(uri, 'base64');
 
-      OpenCV.checkForBlurryImage(
-        base64,
-        err => Alert.alert(err.message),
-        success => Alert.alert('isBlurry: ' + String(success)),
-      );
+      if (Platform.OS === 'ios') {
+        OpenCV.checkForBlurryImage(base64, (_, [success]) =>
+          Alert.alert('isBlurry: ' + String(success)),
+        );
+      } else {
+        OpenCV.checkForBlurryImage(
+          base64,
+          err => Alert.alert(err.message),
+          success => Alert.alert('isBlurry: ' + String(success)),
+        );
+      }
     } catch (err) {
-      Alert.alert(err.message)
+      Alert.alert(err.message);
     }
-
   };
 
   return (
     <Pressable style={{flex: 1}} onPress={onPress}>
-      <CameraKitCamera ref={ref} style={{flex: 1}} focusMode="on" saveToCameraRoll={false} />
+      <CameraKitCamera
+        ref={ref}
+        style={{flex: 1}}
+        focusMode="on"
+        saveToCameraRoll={false}
+      />
     </Pressable>
   );
 }

@@ -33,7 +33,7 @@ export default function Camera() {
 
   return (
     <Pressable style={{flex: 1}} onPress={onPress}>
-      <CameraKitCamera ref={ref} style={{flex: 1}} focusMode="on" />
+      <CameraKitCamera ref={ref} style={{flex: 1}} focusMode="on" saveToCameraRoll={false} />
     </Pressable>
   );
 }

@@ -4,6 +4,8 @@
 version=3.4.11
 base_url=https://razaoinfo.dl.sourceforge.net/project/opencvlibrary/${version}/
 
+apt-get install wget
+
 wget ${base_url}/opencv-${version}-ios-framework.zip
 unzip -a opencv-${version}-ios-framework.zip
 cd ios

@@ -7,11 +7,11 @@
     "icon": "./src/icon.png",
     "android": {
       "package": "com.z1opencv",
-      "versionCode": 2
+      "versionCode": 3
     },
     "ios": {
       "bundleIdentifier": "com.z1opencv",
-      "buildNumber": "2"
+      "buildNumber": "3"
     }
   }
 }

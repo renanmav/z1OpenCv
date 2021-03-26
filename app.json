@@ -4,6 +4,7 @@
     "slug": "z1OpenCv",
     "owner": "z1app",
     "privacy": "unlisted",
+    "icon": "./src/icon.png",
     "android": {
       "package": "com.z1opencv",
       "versionCode": 2

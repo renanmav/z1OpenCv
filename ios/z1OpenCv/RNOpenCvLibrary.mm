@@ -14,17 +14,17 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
   RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
 
-RCT_EXPORT_METHOD(checkForBlurryImage:(NSString *)imageAsBase64 callback:(RCTResponseSenderBlock)callback) {
-  RCTLogInfo(@"imageAsBase64 is %@", imageAsBase64);
+RCT_EXPORT_METHOD(checkForBlurryImage:(NSString *)imageAsBase64
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject) {
   UIImage* image = [self decodeBase64ToImage:imageAsBase64];
   BOOL isImageBlurryResult = [self isImageBlurry:image];
   
-  id objects[] = { isImageBlurryResult ? @YES : @NO };
-  NSUInteger count = sizeof(objects) / sizeof(id);
-  NSArray *dataArray = [NSArray arrayWithObjects:objects
-                                           count:count];
-  
-  callback(@[[NSNull null], dataArray]);
+  if(isImageBlurryResult) {
+    resolve(@[@(isImageBlurryResult)]);
+  } else {
+    reject(@"checkForBlurryImage_failure", @"No result returned", nil);
+  }
 }
 
 - (cv::Mat)convertUIImageToCVMat:(UIImage *)image {
